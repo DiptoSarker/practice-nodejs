@@ -7,4 +7,4 @@ router.post("/register", authController.register )
 router.post("/login", authLog.login)
  
 
-  module.exports = router;
+module.exports = router;

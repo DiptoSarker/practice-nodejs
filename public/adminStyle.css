@@ -80,3 +80,10 @@ a:hover {
     color: rgb(239, 243, 17);
     text-decoration: none;
 }
+
+.Abtn{
+    display: flex;
+    margin: auto;
+    padding: 40px;
+    justify-content: space-between;
+}

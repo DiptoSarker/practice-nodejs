@@ -40,6 +40,11 @@ footer {
     padding: 10px;
     text-decoration: none;
     text-align: center;
+    
+}
+
+.ftr{
+    margin: auto;
 }
 
 .card-body{
