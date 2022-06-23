@@ -91,3 +91,24 @@ a:hover {
     margin-top: 50px;
     margin-bottom: 20px;
 }
+
+.one{
+    height: 200px;
+    display: flex;
+    background-color: aquamarine;
+    padding: 50px;
+    
+    text-align: center;
+}
+
+.two{
+    flex: 1;
+    margin: auto;
+    
+}
+
+.three{
+    font: 1;
+    margin: auto;
+    
+}

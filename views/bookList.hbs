@@ -18,34 +18,54 @@
     </nav>
 
 
-      <main>
+     
           <div class="container pt-5 pb-5">
        
-            <center><div class="well mt-3 mb-3"><h2>User Details</h2></div></center>
-            <table class="table">
-                <thead>
+            <center><div class="well mt-3 mb-3"><h2>Book List</h2></div></center>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
                     <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                        <th>Book Now</th>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Mobile</th>
+                        <th class="text-center">Book Now</th>
                     </tr>
                    
                    
                 </thead>
-                  {{#each result}}
+                  {{#each ress}}
                  <tr> 
-                  <td>{{id}}</td>
-                  <td>{{name}}</td>
-                  <td>{{email}}</td>
-                  <td>{{mobile}}</td>
-                  <td><button type="button" class="btn btn-primary">Book Now</button></td>
+                  <td class="text-center">{{id}}</td>
+                  <td class="text-center">{{Book_Name}}</td>
+                  <td class="text-center">{{Writer_Name}}</td>
+                  <td class="text-center">{{Publications}}</td>
+                  <td class="text-center">{{Catagories}}</td>
+                  <td class="text-center"><button type="button" class="btn btn-primary"><a href="mailto:diptosarker802@gmail.com">Book Now </a></button></td>
                    </tr>
                   {{/each}}
             </table>
             </div>
-      </main>
+
+            <div class="one">
+                <div class="two">
+                    <h1>Books</h1> 
+                </div>
+                <div class="three">
+                   <h1>Writters</h1> 
+                </div>
+            </div>
+
+             <div class="four">
+                <div class="five">
+                    <h1>Books</h1> 
+                </div>
+                <div class="six">
+                   <h1>Writters</h1> 
+                </div>
+            </div>
+            </div>
+      
 
 
     <footer>

@@ -3,6 +3,7 @@ const Connection = require('mysql/lib/Connection');
 const mysql = require("mysql");
 const router = express.Router();
 
+
 const db= mysql.createConnection({
    host: process.env.DATABASE_HOST,
    user: process.env.DATABASE_USER,
@@ -10,18 +11,16 @@ const db= mysql.createConnection({
    database: process.env.DATABASE
 });
 
+
 router.get("/", (req, res) => {
-    // res.send("<h1> Home Page </h1>")
-    res.render("index");
+      res.render("index");
  });
  
 router.get("/register", (req, res) => {
-     // res.send("<h1> Home Page </h1>")
      res.render("register");
   });
 
   router.get("/login", (req, res) => {
-    // res.send("<h1> Home Page </h1>")
     res.render("login");
  });
 
@@ -33,32 +32,29 @@ router.get("/addBook", (req, res) => {
   res.render("addBook");
 });
 
-//router.get("/bookList", (req, res) => {
-  // res.render("bookList");
-//});
 
 
 
-router.get("/bookList", (req, res) => {
+
+router.get("/userList", (req, res) => {
    let sql = "SELECT id,name,email,mobile FROM users ";
    let query = db.query(sql, (err, result) => {
      if (err) throw err;
      
-     res.render("bookList", { result });
+     res.render("userList", { result });
    });
  });
 
- router.get("/userList", (req, res) => {
-  let sql = "SELECT id,name,email,mobile FROM users ";
-  let query = db.query(sql, (err, result) => {
+
+ router.get("/bookList", (req, res) => {
+  let sql = "SELECT id,Book_Name, Writer_Name, Publications, Catagories  FROM user ";
+  let query = db.query(sql, (err, ress) => {
     if (err) throw err;
     
-    res.render("userList", { result });
+    res.render("bookList", { ress });
+    console.log(ress)
   });
 });
 
 
-
-
-
-  module.exports = router;
+module.exports = router;
