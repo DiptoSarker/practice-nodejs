@@ -29,6 +29,10 @@ router.get("/register", (req, res) => {
    res.render("index");
 });
 
+router.get("/addBook", (req, res) => {   
+  res.render("addBook");
+});
+
 //router.get("/bookList", (req, res) => {
   // res.render("bookList");
 //});
@@ -39,10 +43,21 @@ router.get("/bookList", (req, res) => {
    let sql = "SELECT id,name,email,mobile FROM users ";
    let query = db.query(sql, (err, result) => {
      if (err) throw err;
-     console.log(result);
+     
      res.render("bookList", { result });
    });
  });
+
+ router.get("/userList", (req, res) => {
+  let sql = "SELECT id,name,email,mobile FROM users ";
+  let query = db.query(sql, (err, result) => {
+    if (err) throw err;
+    
+    res.render("userList", { result });
+  });
+});
+
+
 
 
 

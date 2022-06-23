@@ -2,11 +2,17 @@ const express = require("express");
 const path = require('path');
 const mysql= require("mysql");
 const dotenv = require('dotenv');
+const exphbs = require ("express-handlebars");
+const bodyParser  =  require("body-parser");
 
 dotenv.config({path: './.env'});
 
+
 const app = express();
 
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(bodyParser.json());
 
 const db = mysql.createConnection({
   host: process.env.DATABASE_HOST,
