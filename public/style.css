@@ -93,10 +93,10 @@ a:hover {
 }
 
 .one{
-    height: 200px;
+    height: 50px;
     display: flex;
-    background-color: aquamarine;
-    padding: 50px;
+   
+    padding: 20px;
     
     text-align: center;
 }
